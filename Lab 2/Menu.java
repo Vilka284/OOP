@@ -1,51 +1,44 @@
 package com.Labs2;
 
 import java.util.Scanner;
-import java.util.ArrayList;
 
 public class Menu {
     static Scanner in = new Scanner(System.in);
-    static ArrayList<Container> listOfContainers = new ArrayList<>();
+    static Container Container;
 
     public static void input() {
         System.out.print("Enter length: ");
-        listOfContainers.add(new Container(in.nextInt()));
+        new Container(in.nextInt());
         System.out.print("Enter container's index: ");
         int index = in.nextInt();
-        if (index > listOfContainers.size() || index < 0)
+        if (index > Container.maxSize() || index < 0)
             System.out.println("index not found");
-        System.out.println("Enter " + listOfContainers.get(index-1).maxSize() + " strings one by one:");
+        System.out.println("Enter " + Container.get(index-1) + " strings one by one:");
         in.nextLine();
-        for (int i = 0, n = listOfContainers.get(index-1).maxSize(); i < n; i++) {
-            listOfContainers.get(index-1).add(in.nextLine());
+        for (int i = 0, n = Container.maxSize(); i < n; i++) {
+            Container.add(in.nextLine());
         }
     }
 
     public static void show() {
         System.out.print("Enter container's index: ");
         int showIndex = in.nextInt();
-        if (showIndex > listOfContainers.size() || showIndex < 1)
+        if (showIndex > Container.size() || showIndex < 1)
             System.out.println("index not found");
-        System.out.println(listOfContainers.get(showIndex-1).toString());
+        System.out.println(Container.get(showIndex-1).toString());
     }
 
     public static void clear() {
         System.out.print("Enter container's index: ");
         int delIndex = in.nextInt();
-        if (delIndex > listOfContainers.size() || delIndex < 1) {
+        if (delIndex > Container.size() || delIndex < 1) {
             System.out.println("Error! not found");
         }
-        listOfContainers.get(delIndex-1).clear();
+        Container.get(delIndex-1);
     }
 
     public static void menu() {
         while(true) {
-            System.out.print("Enter container's index: ");
-            int menuIndex = in.nextInt();
-            if (menuIndex > listOfContainers.size() || menuIndex < 1) {
-                System.out.println("not found");
-                break;
-            }
             System.out.println("||||||||||||||||||||||||||||||||||||||||||");
             System.out.println("1 - Add element");
             System.out.println("2 - Remove element");
@@ -67,63 +60,63 @@ public class Menu {
                 case 1:
                     System.out.println("Input element: ");
                     in.nextLine();
-                    listOfContainers.get(menuIndex - 1).add(in.nextLine());
+                    Container.add(in.nextLine());
                     break;
                 case 2:
                     System.out.println("Input element: ");
                     in.nextLine();
-                    listOfContainers.get(menuIndex - 1).remove(in.nextLine());
+                    Container.remove(in.nextLine());
                     break;
                 case 3:
                     for (String i:
-                         listOfContainers.get(menuIndex-1).toArr()) {
+                        Container.toArr()) {
                         System.out.println(i);
                     }
                     break;
                 case 4:
-                    System.out.println(listOfContainers.get(menuIndex-1).size());
+                    System.out.println(Container.size());
                     break;
                 case 5:
                     System.out.println("enter string to check if it exist in container:");
                     in.nextLine();
-                    System.out.println(listOfContainers.get(menuIndex-1).contains(in.nextLine()));
+                    System.out.println(Container.contains(in.nextLine()));
                     break;
                 case 6:
                     System.out.println("Enter string to check if it exist in container:");
                     in.nextLine();
-                    System.out.println(listOfContainers.get(menuIndex-1).contains(in.nextLine()));
+                    System.out.println(Container.contains(in.nextLine()));
                     break;
                 case 7:
                     System.out.println("Enter file name(name.format): ");
                     in.nextLine();
-                    listOfContainers.get(menuIndex-1).serialize(in.nextLine());
+                    Container.serialize(in.nextLine());
                     break;
                 case 8:
                     System.out.println("Enter file name(name.format): ");
                     in.nextLine();
-                    listOfContainers.get(menuIndex-1).deserialize(in.nextLine());
+                    Container.deserialize(in.nextLine());
                     break;
                 case 9:
                     System.out.print("Enter index: ");
-                    listOfContainers.get(menuIndex-1).get(in.nextInt());
+                    Container.get(in.nextInt());
                     break;
                 case 10:
                     System.out.println("Enter element:");
                     in.nextLine();
-                    listOfContainers.get(menuIndex-1).indexOf(in.nextLine());
+                    Container.indexOf(in.nextLine());
                     break;
                 case 11:
-                    listOfContainers.get(menuIndex-1).sort();
+                    Container.sort();
                     System.out.println("done!");
                     break;
                 case 12:
                     for (String i:
-                            listOfContainers.get(menuIndex-1)) {
+                            Container) {
                         System.out.println(i);
                     }
                     break;
                 case 13:
-                    Iterator_a i = (Iterator_a) listOfContainers.get(menuIndex-1).iterator();
+                    Iterator_a i = (Iterator_a) Container.iterator();
                     while (i.hasNext()) {
                         System.out.println(i.next());
                     }
