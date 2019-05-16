@@ -24,12 +24,10 @@ public class Main {
         System.out.println("_._._._._._._._._");
     }
     //helper
-    static void helper(boolean help) {
-        if (help) {
+    static void helper() {
             System.out.println("_______________");
             System.out.println("Andrew Syd | KN - 111 | Lab 1 #9");
             System.out.println("_______________");
-        }
     }
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -47,7 +45,7 @@ public class Main {
             }
         }
         if (help)
-            helper(help);
+            helper();
         while (true) {
             System.out.println("______________");
             System.out.println("1 - input");

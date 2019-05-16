@@ -27,10 +27,6 @@ public class Menu {
     public static Map<String, Integer> calculate(String str, List<String> words, Map<String, Integer> counterMap) {
         if (str != null) {
             words = Split.splitEx(str, " ");
-            /*for (String word :
-                 str1) {1
-                words.add(word);
-            }*/
             for (String word :
                     words) {
                 if (!word.isEmpty()) {

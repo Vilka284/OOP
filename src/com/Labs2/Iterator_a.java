@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 
-public class Iterator_a<T> implements Iterator<T> {
+public class Iterator_a implements Iterator<String> {
     private ArrayList data;
     private int current = 0;
     private int stop;
@@ -20,8 +20,8 @@ public class Iterator_a<T> implements Iterator<T> {
     }
 
     @Override
-    public T next() {
-        return (T) data.get(current++);
+    public String next() {
+        return (String) data.get(current++);
     }
 
     @Override

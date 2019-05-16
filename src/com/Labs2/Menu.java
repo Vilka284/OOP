@@ -8,7 +8,7 @@ public class Menu {
 
     public static void input() {
         System.out.print("Enter length: ");
-        new Container(in.nextInt());
+        Container = new Container(in.nextInt());
         System.out.print("Enter container's index: ");
         int index = in.nextInt();
         if (index > Container.maxSize() || index < 0)
