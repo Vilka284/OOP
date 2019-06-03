@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controlers.addNewBookInfoController">
+   <children>
+      <AnchorPane layoutY="185.0" prefHeight="415.0" prefWidth="800.0" style="-fx-background-color: fff;">
+         <children>
+            <Button fx:id="addButton" layoutX="264.0" layoutY="323.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="273.0" style="-fx-background-color: #13ef37; -fx-background-radius: 8;" text="Додати " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <TextField fx:id="GenreField" layoutX="251.0" layoutY="136.0" prefHeight="54.0" prefWidth="300.0" promptText="Жанр" style="-fx-border-color:#f78902; -fx-background-radius: 5; -fx-background-color: fafafa; -fx-border-radius: 5;">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="PublicationField" layoutX="251.0" layoutY="55.0" prefHeight="54.0" prefWidth="300.0" promptText="Публікація" style="-fx-border-color: #f78902; -fx-background-radius: 5; -fx-background-color: fafafa; -fx-border-radius: 5;">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="AuthorsField" layoutX="251.0" layoutY="222.0" prefHeight="54.0" prefWidth="300.0" promptText="Автори (можна декількох)" style="-fx-border-color: #f78902; -fx-background-radius: 5; -fx-background-color: fafafa; -fx-border-radius: 5;">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+      <Label layoutX="191.0" layoutY="53.0" text="Бібліотека" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="64.0" />
+         </font>
+      </Label>
+      <Button fx:id="backButton" layoutX="683.0" layoutY="76.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="89.0" style="-fx-background-color: #f78902; -fx-background-radius: 8;" text="назад" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
