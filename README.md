@@ -4,7 +4,7 @@ Object Oriented Programming Java
 ## Content:
 Labs 1 - Some standart tasks with classes and objects
 
-Labs 2 - Own container, iterator, serializtion
+Labs 2 - Own container, iterator, serialization
 
 Labs 3 - Decomposition
 
